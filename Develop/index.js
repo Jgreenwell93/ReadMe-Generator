@@ -19,7 +19,7 @@ const questions = () => {
             {
                 type: 'list',
                 message: 'What is your license type?',
-                choices: ['', '', ''],
+                choices: ['Apache 2.0', 'MIT', 'Mozilla Public License 2.0'],
                 name: 'licenseType',
             },
             {
