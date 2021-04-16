@@ -1,5 +1,5 @@
 // TODO: Include packages needed for this application
-const questionPrompts = require('inquirer');
+const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 const util = require('util');
@@ -21,11 +21,6 @@ const questions = () => {
                 message: 'What is your license type?',
                 choices: ['Apache 2.0', 'MIT', 'Mozilla Public License 2.0'],
                 name: 'licenseType',
-            },
-            {
-                type: 'input',
-                message: 'What is your license code?',
-                name: 'license',
             },
             {
                 type: 'input',
@@ -68,7 +63,7 @@ const questions = () => {
 
 
 // TODO: Create a function to write README file
-function generateREADME(fileName, data) { }
+// function generateREADME(fileName, data) { }
 
 // TODO: Create a function to initialize app
 const init = () => {
