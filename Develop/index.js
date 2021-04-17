@@ -103,9 +103,9 @@ ${license}
 <hr>
 
 <h1>For Questions or Contact:</h1>
-<a href="${answers.github}"> GitHub:${answers.github}</a>
+<a href="${answers.github}"> GitHub: ${answers.github}</a>
 <br>
-<a href="${answers.email}">Email:${answers.email}</a>
+<a href="${answers.email}">Email: ${answers.email}</a>
     `
     return output;
 }
