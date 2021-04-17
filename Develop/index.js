@@ -63,45 +63,52 @@ const questions = () => {
 
 
 // TODO: Create a function to write README file
-generateREADME=(license, answers) => {
-    let output =`
+generateREADME = (license, answers) => {
+    let output = `
     ${license}
+    
     <h1>${answers.title}</h>
-    <br>
-    <br>
+
+    <hr>
+
     <h1>Description</h1>
     <p>${answers.description}</p>
-    <br>
-    <br>
+
+    <hr>
+
     <h1>Usage</h1>
     <p>${answers.usage}</p>
-    <br>
-    <br>
+
+    <hr>
+
     <h1>How to Install</h1>
     <p>${answers.install}</p>
-    <br>
-    <br>
+
+    <hr>
+
     <h1>Testing Done</h1>
     <p>${answers.tests}</p>
-    <br>
-    <br>
+
+    <hr>
+
     <h1>How to make contributions</h1>
     <p>${answers.contrib}</p>
-    <br>
-    <br>
+
+    <hr>
+
     <h1>For Questions or Contact</h1>
     <a href="${answers.github}"> GitHub:${answers.github}</a>
     <a href="${answers.email}">Email:${answers.email}</a>
     `
     return output;
- }
+}
 
 // TODO: Create a function to initialize app
 const init = () => {
-questions()
-.then((answers) => writeFileAsync('README.md', generateREADME(generateMarkdown(answers), answers)))
-.then(() => console.log('Successfully wrote to README'))
-.catch((err) => console.error(err));
+    questions()
+        .then((answers) => writeFileAsync('README.md', generateREADME(generateMarkdown(answers), answers)))
+        .then(() => console.log('Successfully wrote to README'))
+        .catch((err) => console.error(err));
 };
 
 // Function call to initialize app
