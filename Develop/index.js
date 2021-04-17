@@ -74,7 +74,7 @@ generateREADME=(license, answers) => {
     <br>
     <br>
     <h1>Usage</h1>
-    <p>${answer.usage}</p>
+    <p>${answers.usage}</p>
     <br>
     <br>
     <h1>How to Install</h1>
@@ -97,18 +97,12 @@ generateREADME=(license, answers) => {
 
 // TODO: Create a function to initialize app
 const init = () => {
-    questions()
-        .then((answers) => generateMarkdown(answers))
-        .then((license, answers) => writeFileAsync('README.md', generateREADME(license, answers)))
-        .then(() => console.log('Successfully wrote to README'))
-        .catch((err) => console.error(err));
+questions()
+.then((answers) => writeFileAsync('README.md', generateREADME(generateMarkdown(answers), answers)))
+.then(() => console.log('Successfully wrote to README'))
+.catch((err) => console.error(err));
 };
 
 // Function call to initialize app
 init();
 
-
-// fs.writeFile('index.html', output, (err) =>
-// err ? console.error(err) : console.log('Commit logged!'))
-//     })
-//   }
