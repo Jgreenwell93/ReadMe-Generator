@@ -69,35 +69,42 @@ ${license}
 
 <h1>${answers.title}</h>
 
+<br>
 <hr>
 
-<h1>Description</h1>
+<h1>Description:</h1>
 <p>${answers.description}</p>
 
+<br>
 <hr>
 
-<h1>Usage</h1>
+<h1>Usage:</h1>
 <p>${answers.usage}</p>
 
+<br>
 <hr>
 
-<h1>How to Install</h1>
+<h1>How to Install:</h1>
 <p>${answers.install}</p>
 
+<br>
 <hr>
 
-<h1>Testing Done</h1>
+<h1>Testing Done:</h1>
 <p>${answers.tests}</p>
 
+<br>
 <hr>
 
-<h1>How to make contributions</h1>
+<h1>How to make contributions:</h1>
 <p>${answers.contrib}</p>
 
+<br>
 <hr>
 
-<h1>For Questions or Contact</h1>
+<h1>For Questions or Contact:</h1>
 <a href="${answers.github}"> GitHub:${answers.github}</a>
+<br>
 <a href="${answers.email}">Email:${answers.email}</a>
     `
     return output;
