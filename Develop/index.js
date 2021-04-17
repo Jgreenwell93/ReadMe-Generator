@@ -93,6 +93,7 @@ generateREADME=(license, answers) => {
     <a href="${answers.github}"> GitHub:${answers.github}</a>
     <a href="${answers.email}">Email:${answers.email}</a>
     `
+    return output;
  }
 
 // TODO: Create a function to initialize app

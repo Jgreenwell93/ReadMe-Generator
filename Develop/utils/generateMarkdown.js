@@ -18,6 +18,7 @@ function renderLicense(answers) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
+  console.log(answers);
   const license = renderLicense(answers);
   console.log(license);
   return license;
