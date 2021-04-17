@@ -63,12 +63,11 @@ const questions = () => {
 
 
 // TODO: Create a function to write README file
-// function generateREADME(fileName, data) { }
+function generateREADME(fileName, data) { }
 
 // TODO: Create a function to initialize app
 const init = () => {
     questions()
-        // .then((answers) => module.exports = answers.licenseType)
         .then((answers) => generateMarkdown(answers))
         .then((answers) => writeFileAsync('README.md', generateREADME(answers)))
         .then(() => console.log('Successfully wrote to README'))
