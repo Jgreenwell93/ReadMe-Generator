@@ -65,40 +65,40 @@ const questions = () => {
 // TODO: Create a function to write README file
 generateREADME = (license, answers) => {
     let output = `
-    ${license}
-    
-    <h1>${answers.title}</h>
+${license}
 
-    <hr>
+<h1>${answers.title}</h>
 
-    <h1>Description</h1>
-    <p>${answers.description}</p>
+<hr>
 
-    <hr>
+<h1>Description</h1>
+<p>${answers.description}</p>
 
-    <h1>Usage</h1>
-    <p>${answers.usage}</p>
+<hr>
 
-    <hr>
+<h1>Usage</h1>
+<p>${answers.usage}</p>
 
-    <h1>How to Install</h1>
-    <p>${answers.install}</p>
+<hr>
 
-    <hr>
+<h1>How to Install</h1>
+<p>${answers.install}</p>
 
-    <h1>Testing Done</h1>
-    <p>${answers.tests}</p>
+<hr>
 
-    <hr>
+<h1>Testing Done</h1>
+<p>${answers.tests}</p>
 
-    <h1>How to make contributions</h1>
-    <p>${answers.contrib}</p>
+<hr>
 
-    <hr>
+<h1>How to make contributions</h1>
+<p>${answers.contrib}</p>
 
-    <h1>For Questions or Contact</h1>
-    <a href="${answers.github}"> GitHub:${answers.github}</a>
-    <a href="${answers.email}">Email:${answers.email}</a>
+<hr>
+
+<h1>For Questions or Contact</h1>
+<a href="${answers.github}"> GitHub:${answers.github}</a>
+<a href="${answers.email}">Email:${answers.email}</a>
     `
     return output;
 }
