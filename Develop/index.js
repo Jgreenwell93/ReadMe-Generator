@@ -63,16 +63,52 @@ const questions = () => {
 
 
 // TODO: Create a function to write README file
-function generateREADME(fileName, data) { }
+generateREADME=(license, answers) => {
+    let output =`
+    ${license}
+    <h1>${answers.title}</h>
+    <br>
+    <br>
+    <h1>Description</h1>
+    <p>${answers.description}</p>
+    <br>
+    <br>
+    <h1>Usage</h1>
+    <p>${answer.usage}</p>
+    <br>
+    <br>
+    <h1>How to Install</h1>
+    <p>${answers.install}</p>
+    <br>
+    <br>
+    <h1>Testing Done</h1>
+    <p>${answers.tests}</p>
+    <br>
+    <br>
+    <h1>How to make contributions</h1>
+    <p>${answers.contrib}</p>
+    <br>
+    <br>
+    <h1>For Questions or Contact</h1>
+    <a href="${answers.github}"> GitHub:${answers.github}</a>
+    <a href="${answers.email}">Email:${answers.email}</a>
+    `
+ }
 
 // TODO: Create a function to initialize app
 const init = () => {
     questions()
         .then((answers) => generateMarkdown(answers))
-        .then((answers) => writeFileAsync('README.md', generateREADME(answers)))
+        .then((license, answers) => writeFileAsync('README.md', generateREADME(license, answers)))
         .then(() => console.log('Successfully wrote to README'))
         .catch((err) => console.error(err));
 };
 
 // Function call to initialize app
 init();
+
+
+// fs.writeFile('index.html', output, (err) =>
+// err ? console.error(err) : console.log('Commit logged!'))
+//     })
+//   }
